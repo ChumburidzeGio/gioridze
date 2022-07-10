@@ -39,8 +39,8 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
         <ThemeSwitch />
       </div>
       {header}
-      <main className={classNames('flex-1 px-8 lg:px-24 py-8 md:py-16 overflow-y-auto', isRootPath ? 'bg-zinc-100 dark:bg-gray-900' : 'bg-white dark:bg-gray-900 text-black dark:text-white')}>
-        {children}
+      <main className={classNames('flex-1 py-8 md:py-16 overflow-y-auto px-6 lg:px-24', isRootPath ? 'bg-zinc-100 dark:bg-gray-900' : 'bg-white dark:bg-gray-900 text-black dark:text-white min-h-full min-w-full')}>
+        <div className={classNames(isRootPath ? '' : "flex flex-col max-w-4xl m-auto")}>{children}</div>
       </main>
     </div>
   )

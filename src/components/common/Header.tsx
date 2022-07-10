@@ -1,20 +1,20 @@
 import React  from "react"
 import { Link } from "gatsby"
-import { HomeIcon } from "@heroicons/react/outline"
+import { ArrowLeftIcon } from "@heroicons/react/outline"
 import { EmptyProps } from "@/definitions"
 import {ThemeSwitch} from "@/components/common/index";
 
 const Header: React.FC<EmptyProps> = () => {
   return (
-      <div className="bg-white dark:bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 w-full">
-              <div className="flex justify-between">
+      <div className="bg-gray-900 dark:bg-black">
+          <div className="max-w-7xl mx-auto px-8 py-4 sm:px-6 md:py-6 w-full">
+              <div className="flex justify-between text-white">
                 <Link
                   to="/"
-                  className="flex flex-row rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300"
+                  className="mt-1 flex flex-row rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300"
                 >
-                  <HomeIcon className="flex h-8 w-auto" />
-                  <div className="flex mt-1 ml-3">Go back</div>
+                  <ArrowLeftIcon className="flex h-4 w-auto mt-0.5" />
+                  <div className="flex ml-3 font-bold text-sm">Go Home</div>
                 </Link>
                 <ThemeSwitch />
             </div>

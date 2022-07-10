@@ -1,6 +1,9 @@
 import { MDXProviderComponentsProp, MDXProviderProps } from "@mdx-js/react"
 import React, { ReactElement } from "react"
 import CodeBlock from "./CodeBlock"
+import {CustomH1, CustomH2, CustomH3, CustomH4, CustomP} from "@/components/mdx/typography";
+import {CustomLi, CustomUl} from "@/components/mdx/lists";
+import {Anchor, AnchorProps} from "@/components/mdx/anchor";
 
 const preToCodeBlock = (preProps: MDXProviderProps) => {
   if (
@@ -44,6 +47,15 @@ const components: MDXProviderComponentsProp = {
       return <pre {...preProps} />
     }
   },
+  h1: CustomH1,
+  h2: CustomH2,
+  h3: CustomH3,
+  h4: CustomH4,
+  p: CustomP,
+  ul: CustomUl,
+  li: CustomLi,
+  a: (props: AnchorProps) => <Anchor {...props} />,
 }
 
 export default components
+
