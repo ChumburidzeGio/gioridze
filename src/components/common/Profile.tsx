@@ -30,7 +30,7 @@ const Bio: React.FC<EmptyProps> = () => {
 
   return (
     <>
-      <div className="flex items-center space-x-3 pt-4">
+      <div className="flex items-center space-x-3">
         <div className="rounded-full overflow-hidden">
           <StaticImage
             className="hidden sm:flex"
@@ -48,15 +48,15 @@ const Bio: React.FC<EmptyProps> = () => {
             layout="fixed"
             formats={["auto", "webp", "avif"]}
             src="../../images/avatar.jpeg"
-            width={80}
-            height={80}
+            width={60}
+            height={60}
             quality={95}
             imgStyle={{ borderRadius: "100%" }}
             alt="Giorgi Chumburidze"
           />
         </div>
         <div>
-          <h3 className="font-bold text-2xl tracking-wide">{author.name}</h3>
+          <h3 className="font-black sm:font-bold text-lg sm:text-xl tracking-wide">{author.name}</h3>
           <div className="pt-2 flex space-x-4">
             {social.linkedin && <Button
                 label="Linkedin"

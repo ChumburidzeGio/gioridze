@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
   if (isRootPath) {
     header = (
       <div className="w-full md:w-1/3 relative">
-        <div className="md:h-full p-8 flex flex-col justify-center bg-gray-900 dark:bg-black text-white transition-colors">
+        <div className="md:h-full p-8 sm:p-8 flex flex-col justify-center bg-gray-900 dark:bg-black text-white transition-colors">
           <Bio />
         </div>
       </div>
@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
       } selection:bg-yellow-200 selection:text-black`}
     >
       <div
-        className={`${isRootPath ? "" : "hidden"} absolute top-0 right-0 m-5`}
+        className={`${isRootPath ? "" : "hidden"} absolute top-0 right-0 m-3 sm:m-5`}
       >
         <ThemeSwitch />
       </div>
