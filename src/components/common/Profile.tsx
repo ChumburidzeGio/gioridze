@@ -31,9 +31,9 @@ const Bio: React.FC<EmptyProps> = () => {
   return (
     <>
       <div className="flex items-center space-x-3 pt-4">
-        <div>
+        <div className="rounded-full overflow-hidden">
           <StaticImage
-            className="rounded-full overflow-hidden hidden sm:flex"
+            className="hidden sm:flex"
             layout="fixed"
             formats={["auto", "webp", "avif"]}
             src="../../images/avatar.jpeg"
@@ -44,7 +44,7 @@ const Bio: React.FC<EmptyProps> = () => {
             alt="Giorgi Chumburidze"
           />
           <StaticImage
-            className="rounded-full overflow-hidden flex sm:hidden"
+            className="flex sm:hidden"
             layout="fixed"
             formats={["auto", "webp", "avif"]}
             src="../../images/avatar.jpeg"
