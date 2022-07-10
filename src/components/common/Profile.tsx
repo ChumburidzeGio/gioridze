@@ -56,7 +56,7 @@ const Bio: React.FC<EmptyProps> = () => {
           />
         </div>
         <div>
-          <h3 className="font-black sm:font-bold text-lg sm:text-xl tracking-wide">{author.name}</h3>
+          <h3 className="font-black sm:font-bold text-xl sm:text-xl tracking-wide">{author.name}</h3>
           <div className="pt-2 flex space-x-4">
             {social.linkedin && <Button
                 label="Linkedin"
