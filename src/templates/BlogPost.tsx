@@ -19,7 +19,7 @@ const BlogPostTemplate: React.FC<PageProps> = ({ data, location }) => {
       <article itemScope itemType="http://schema.org/Article">
         <header className="grid grid-cols-blog">
           <h1
-            className="col-start-2 font-exo font-black text-skin-fg text-4xl md:text-6xl"
+            className="col-start-2 font-black text-black dark:text-blue-600 text-4xl md:text-6xl"
             itemProp="headline"
           >
             {post.frontmatter.title}

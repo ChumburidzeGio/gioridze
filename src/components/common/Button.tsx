@@ -1,5 +1,5 @@
 import React from "react"
-import { ButtonProps } from "../button"
+import {ButtonProps} from "@/definitions";
 
 const IconButton: React.FC<ButtonProps> = ({
   href,
@@ -14,7 +14,7 @@ const IconButton: React.FC<ButtonProps> = ({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className={`${sizeClasses} inline-flex bg-skin-base-md items-center rounded-md md:rounded-lg shadow-fg text-skin-base focus:outline-none focus:ring-4 focus:ring-skin-focus`}
+      className={`${sizeClasses} inline-flex bg-white items-center rounded-md md:rounded-lg shadow-fg text-white focus:outline-none focus:ring-4 focus:ring-indigo-300`}
     >
       {children}
     </a>

@@ -9,8 +9,6 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import FontUrl1 from "../../fonts/exo-v12-latin-900.woff2"
-import FontUrl2 from "../../fonts/yrsa-v7-latin-regular.woff2"
 import { ISite } from "@/definitions"
 import { getTheme } from "@/utils/fns"
 
@@ -83,22 +81,7 @@ const Seo: React.FC<SEOProps> = ({ description, lang, meta, title }) => {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={metaProps.concat(meta || [])}
-    >
-      <link
-        rel="preload"
-        as="font"
-        href={FontUrl1}
-        type="font/woff2"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
-        as="font"
-        href={FontUrl2}
-        type="font/woff2"
-        crossOrigin="anonymous"
-      />
-    </Helmet>
+    />
   )
 }
 

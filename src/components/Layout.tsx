@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { Location } from "history"
 
 import { Header, Bio, ThemeSwitch } from "./common"
+import {classNames} from "@/utils/class-names";
 
 interface LayoutProps {
   location: Location
@@ -17,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
   if (isRootPath) {
     header = (
       <div className="w-full md:w-1/3 relative">
-        <div className="md:h-full p-8 flex flex-col justify-center bg-skin-base transition-colors">
+        <div className="md:h-full p-8 flex flex-col justify-center bg-slate-900 dark:bg-black text-white transition-colors">
           <Bio />
         </div>
       </div>
@@ -38,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ location, children }) => {
         <ThemeSwitch />
       </div>
       {header}
-      <main className="flex-1 bg-gradient-to-br from-skin-primary to-skin-secondary transition-colors px-8 lg:px-24 py-8 md:py-16 overflow-y-auto">
+      <main className={classNames('flex-1 px-8 lg:px-24 py-8 md:py-16 overflow-y-auto', isRootPath ? 'bg-zinc-100 dark:bg-gray-900' : 'bg-white dark:bg-gray-900 text-black dark:text-white')}>
         {children}
       </main>
     </div>
