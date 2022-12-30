@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import { Github, Linkedin, Twitter } from "../icons"
 import { Button } from "."
 import { EmptyProps, ISite } from "@/definitions"
@@ -24,36 +23,14 @@ const Bio: React.FC<EmptyProps> = () => {
     }
   `)
 
-  // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
   return (
     <>
       <div className="flex items-center space-x-3">
-        <div className="rounded-full overflow-hidden">
-          <StaticImage
-            className="hidden sm:flex"
-            layout="fixed"
-            formats={["auto", "webp", "avif"]}
-            src="../../images/avatar.jpeg"
-            width={120}
-            height={120}
-            quality={95}
-            imgStyle={{ borderRadius: "100%" }}
-            alt="Giorgi Chumburidze"
-          />
-          <StaticImage
-            className="flex sm:hidden"
-            layout="fixed"
-            formats={["auto", "webp", "avif"]}
-            src="../../images/avatar.jpeg"
-            width={60}
-            height={60}
-            quality={95}
-            imgStyle={{ borderRadius: "100%" }}
-            alt="Giorgi Chumburidze"
-          />
+        <div className="rounded-full overflow-hidden h-[60px] w-[60px] sm:h-[120px] sm:w-[120px] bg-white bg-opacity-70">
+          <img src="https://gioridze.vercel.app/static/0223a5799de0f61ffd441f13e243fb35/17eb7/avatar.avif" alt="Giorgi Chumburidze" className="w-full h-full"/>
         </div>
         <div>
           <h3 className="font-black sm:font-bold text-xl sm:text-xl tracking-wide">{author.name}</h3>
